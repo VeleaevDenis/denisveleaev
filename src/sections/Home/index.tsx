@@ -55,7 +55,7 @@ const PageStyles = styled.div`
   }
 `
 
-const HomePage = () => (
+export const HomePage = () => (
   <PageStyles>
     <SEO title="CV Front-End Developer" />
     <Profile />
@@ -76,4 +76,3 @@ const HomePage = () => (
   </PageStyles>
 )
 
-export default HomePage
