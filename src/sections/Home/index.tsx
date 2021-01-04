@@ -75,4 +75,3 @@ export const HomePage = () => (
     <Skills />
   </PageStyles>
 )
-

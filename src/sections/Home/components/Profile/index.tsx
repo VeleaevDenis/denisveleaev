@@ -5,7 +5,6 @@ import { useProfile } from './hooks'
 
 const ProfileStyles = styled.div`
   display: flex;
-  padding-top: 4rem;
   margin-bottom: 4rem;
 
   @media (max-width: 52.5em) {

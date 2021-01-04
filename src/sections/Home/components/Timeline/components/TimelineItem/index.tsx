@@ -1,8 +1,8 @@
 import { Document } from '@contentful/rich-text-types'
-import { format } from 'date-fns'
 import React from 'react'
 import styled from 'styled-components'
 import { RichTextRenderer } from '../../../../../../components'
+import { formatDate } from '../../../../../../utils'
 
 interface Props {
   source: string
@@ -11,8 +11,6 @@ interface Props {
   endOn?: Date | null
   description: Document | null
 }
-
-const formatDate = (date: Date) => format(date, 'MMM yyyy')
 
 const TimelineItemStyles = styled.div`
   display: flex;

@@ -7,6 +7,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 interface Props {
+  className: string
   richTextDocument: Document
 }
 
@@ -25,8 +26,8 @@ const RichTextStyles = styled.div`
   }
 `
 
-export const RichTextRenderer = ({ richTextDocument }: Props) => (
-  <RichTextStyles>
+export const RichTextRenderer = ({ richTextDocument, className }: Props) => (
+  <RichTextStyles className={className}>
     {documentToReactComponents(richTextDocument, options)}
   </RichTextStyles>
 )
