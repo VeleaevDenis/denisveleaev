@@ -62,6 +62,10 @@ const PageStyles = styled.div`
       font-weight: 700;
     }
   }
+
+  pre {
+    background-color: var(--light-grey-2);
+  }
 `
 
 interface Props {
