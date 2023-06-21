@@ -10,6 +10,8 @@ import {
   Hobbies,
   Profile,
   Skills,
+  Languages,
+  Location,
 } from './components'
 
 const PageStyles = styled.div`
@@ -22,17 +24,6 @@ const PageStyles = styled.div`
 
     @media (max-width: 52.5em) {
       flex-direction: column;
-    }
-
-    &__contacts-hobbies {
-      @media (max-width: 52.5em) and (min-width: 40em) {
-        display: flex;
-        justify-content: space-between;
-
-        > * {
-          width: 48%;
-        }
-      }
     }
 
     &__personal-data {
@@ -62,9 +53,11 @@ export const HomePage = () => (
     <div className="cv-info">
       <div className="cv-info__personal-data">
         <AboutMe />
-        <div className="cv-info__contacts-hobbies">
+        <Location />
+        <div className="cv-info__additional-data">
           <Contacts />
           <Hobbies />
+          <Languages />
         </div>
       </div>
       <div className="cv-info__timelines">

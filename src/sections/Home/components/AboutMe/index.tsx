@@ -5,7 +5,7 @@ import { Heading } from '../Heading'
 import { useAboutMe } from './hooks'
 
 const AboutMeStyles = styled.div`
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 `
 
 export const AboutMe = () => {

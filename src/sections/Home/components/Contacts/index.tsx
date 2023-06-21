@@ -4,7 +4,7 @@ import { Heading } from '../Heading'
 import { useContacts } from './hooks'
 
 const ContactsStyles = styled.div`
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 
   ul {
     padding: 0;
