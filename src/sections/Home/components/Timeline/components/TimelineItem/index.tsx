@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { RichTextRenderer } from '../../../../../../components'
 import { formatDate } from '../../../../../../utils'
+import { Options } from '@contentful/rich-text-react-renderer'
 
 interface Props {
   source: string
@@ -85,6 +86,11 @@ const TimelineItemStyles = styled.div`
   }
 `
 
+const renderOptions: Options = {
+  renderText: text =>
+    text.split('\n').map((text, i) => [i > 0 && <br key={i} />, text]),
+}
+
 export const TimelineItem = ({
   source,
   title,
@@ -105,7 +111,12 @@ export const TimelineItem = ({
     <div className="timeline-item__main-info">
       <div className="timeline-item__title">{title}</div>
       <div className="timeline-item__description">
-        {description && <RichTextRenderer richTextDocument={description} />}
+        {description && (
+          <RichTextRenderer
+            richTextDocument={description}
+            options={renderOptions}
+          />
+        )}
       </div>
     </div>
   </TimelineItemStyles>

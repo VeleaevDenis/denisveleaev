@@ -9,11 +9,11 @@ import styled from 'styled-components'
 interface Props {
   className: string
   richTextDocument: Document
+  options?: Options
 }
 
-const options: Options = {
-  renderText: text =>
-    text.split('\n').map((text, i) => [i > 0 && <br key={i} />, text]),
+const defaultOptions: Options = {
+  renderText: text => text.split('\n').map((text, i) => [<br key={i} />, text]),
 }
 
 const RichTextStyles = styled.div`
@@ -26,7 +26,11 @@ const RichTextStyles = styled.div`
   }
 `
 
-export const RichTextRenderer = ({ richTextDocument, className }: Props) => (
+export const RichTextRenderer = ({
+  richTextDocument,
+  className,
+  options = defaultOptions,
+}: Props) => (
   <RichTextStyles className={className}>
     {documentToReactComponents(richTextDocument, options)}
   </RichTextStyles>

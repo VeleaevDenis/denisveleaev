@@ -1,5 +1,6 @@
 import React, { useMemo } from 'react'
 import styled from 'styled-components'
+import ReactMarkdown from 'react-markdown'
 import { Heading } from '../Heading'
 import { useSkills } from './hooks'
 
@@ -42,6 +43,10 @@ const SkillsStyles = styled.div`
       border: 2px solid var(--grey);
       border-radius: 100%;
     }
+
+    > * {
+      margin: 0;
+    }
   }
 `
 
@@ -55,14 +60,18 @@ export const Skills = () => {
           {skillsData
             .slice(0, Math.floor(skillsData.length / 2))
             .map(({ id, text: { text } }) => (
-              <li key={id}>{text}</li>
+              <li key={id}>
+                <ReactMarkdown>{text}</ReactMarkdown>
+              </li>
             ))}
         </ul>
         <ul>
           {skillsData
             .slice(Math.floor(skillsData.length / 2))
             .map(({ id, text: { text } }) => (
-              <li key={id}>{text}</li>
+              <li key={id}>
+                <ReactMarkdown>{text}</ReactMarkdown>
+              </li>
             ))}
         </ul>
       </div>

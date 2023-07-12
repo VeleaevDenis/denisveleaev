@@ -9,6 +9,8 @@ const LocationStyles = styled.div`
 export const Location = () => (
   <LocationStyles>
     <Heading>Location</Heading>
-    <p>Republic of Moldova (available for relocation to Germany)</p>
+    <p>
+      {`I'm currently located in Moldova, but I'm available for relocation to Germany as soon as possible. I graduated from an EU blue card-eligible university.`}
+    </p>
   </LocationStyles>
 )
