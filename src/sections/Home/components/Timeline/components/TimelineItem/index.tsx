@@ -42,6 +42,10 @@ const TimelineItemStyles = styled.div`
         gap: 1.5rem;
         padding-left: 2rem;
       }
+
+      b {
+        font-weight: 500;
+      }
     }
 
     &__source,
