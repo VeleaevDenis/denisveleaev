@@ -2,11 +2,10 @@ import 'normalize.css'
 import React, { FC } from 'react'
 import styled from 'styled-components'
 import { GlobalStyles, Typography } from '../../styles'
-import { Header } from '../Header'
 
 const ContentStyles = styled.main`
   max-width: 120rem;
-  padding: 0 2rem;
+  padding: 4rem 2rem 0;
   margin: auto;
 `
 
@@ -14,9 +13,6 @@ export const Layout: FC = ({ children }) => (
   <>
     <GlobalStyles />
     <Typography />
-    <ContentStyles>
-      <Header />
-      {children}
-    </ContentStyles>
+    <ContentStyles>{children}</ContentStyles>
   </>
 )
