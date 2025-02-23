@@ -10,7 +10,7 @@ export const Location = () => (
   <LocationStyles>
     <Heading>Location</Heading>
     <p>
-      {`I'm currently located in Moldova, but I'm available for relocation to Germany as soon as possible. I graduated from an EU blue card-eligible university.`}
+      {`I am currently based in Augsburg, Germany, and hold an EU passport. I have full work and residency rights across the EU.`}
     </p>
   </LocationStyles>
 )

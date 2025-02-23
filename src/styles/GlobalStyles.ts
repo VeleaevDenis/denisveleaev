@@ -17,5 +17,6 @@ export const GlobalStyles = createGlobalStyle`
 
   body {
     font-size: 2rem;
+    line-height: 1.2;
   }
 `

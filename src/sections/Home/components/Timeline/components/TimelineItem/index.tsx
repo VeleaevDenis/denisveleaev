@@ -37,6 +37,9 @@ const TimelineItemStyles = styled.div`
       flex: 1;
 
       ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
         padding-left: 2rem;
       }
     }
